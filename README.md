@@ -1,7 +1,6 @@
 # js-promise-from-scratch
 A discussion and code example on how to create a JavaScript Promise object from scratch.
 
-## Understand Promises by Creating One from Scratch
 One of the best ways to understand a concept or implementation is by building it up from scratch. Let's take this approach with JavaScript promises. First, well give a brief introduction / refresher to what Promises are and how to use them, then move onto an analysis of how to create one from scratch, notes on implementation with code examples, and finally the full implementation with some test cases.
 
 ## A Brief Intro to JavaScript Promises
