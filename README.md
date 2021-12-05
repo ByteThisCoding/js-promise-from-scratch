@@ -4,7 +4,7 @@ A discussion and code example on how to create a JavaScript Promise object from 
 One of the best ways to understand a concept or implementation is by building it up from scratch. Let's take this approach with JavaScript promises. First, well give a brief introduction / refresher to what Promises are and how to use them, then move onto an analysis of how to create one from scratch, notes on implementation with code examples, and finally the full implementation with some test cases.
 
 ## A Brief Intro to JavaScript Promises
-Before proceeding to how to create a Promise from scratch, let's briefly review what a Promise is and how it works. A **Promise** is an object which handles an asynchronous task, provided by the consumer, and allows consumers to receive and respond to the completion or failure of that task. In a more technical sense, it is a proxy for a value which might not yet be known when the promise is created. Promises will always be in a state of ``pending``, ``fulfilled``, or ``rejected``. When the ``fulfilled`` or ``rejected`` state is reached, the consumer can use the emitted value directly or use it as a part of a chain involving multiple promises.
+Before proceeding to how to create a Promise from scratch, let's briefly review what a Promise is and how it works. A **Promise** is an object which handles an asynchronous task, provided by the consumer, and allows consumers to respond to the completion or failure of that task. In a more technical sense, it is a proxy for a value which might not yet be known when the promise is created. Promises will always be in a state of ``pending``, ``fulfilled``, or ``rejected``. When the ``fulfilled`` or ``rejected`` state is reached, the consumer can use the emitted value directly or use it as a part of a chain involving multiple promises.
 
 The code below shows one common way of chaining promises:
 ```javascript
@@ -23,7 +23,7 @@ return networkResponse.then(value => {
 })
 ```
 
-The code below shows another way of chaining promises in an implicit manner:
+The code below shows another way of chaining promises in a more implicit manner:
 ```javascript
 function makeNetworkCall() {
     return this.networkService.makeCall().then((value) => {
